@@ -1,0 +1,11 @@
+#!/bin/sh
+set -ue
+
+# Add pts/[0-4] to /etc/securetty to allow logins via `machinectl login`
+cat << 'EOT' >> /etc/securetty
+pts/0
+pts/1
+pts/2
+pts/3
+pts/4
+EOT
